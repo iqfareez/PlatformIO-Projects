@@ -11,7 +11,7 @@ const int BUZZER_PIN = 8;
 const int LED_PIN_RED = 7;
 const int LED_PIN_GREEN = 11;
 
-int count = 180; // Default is 180 sec = 3 hours
+int count = 50; // your desired timer in minutes, for eg: 180min for 3hrs
 int initialCount;
 int progressBarCount;
 
@@ -45,6 +45,7 @@ void loop()
     lcd.print((String)count + "min=" + ((float)count / 60) + "hrs");
     lcd.setCursor(0, 1);
     lcd.print("START: BTN2");
+    // to start, press button2
     if (digitalRead(2) == LOW)
     {
       lcd.clear();
@@ -76,25 +77,25 @@ void loop()
     }
     break;
   case finished:
-    tone(BUZZER_PIN, 550);
+    tone(BUZZER_PIN, 640); // sound the buzzer for x freq.
     digitalWrite(LED_PIN_RED, HIGH);
     lcd.setCursor(0, 0);
     lcd.print("Times up!");
-    delay(2000);
+    delay(2700); // sound for x ms before turn off the buzzer
     noTone(BUZZER_PIN);
-
     // Blink the LCD backlight indefinitely (until RESET)
     while (true)
     {
       lcd.noBacklight();
-      delay(450);
+      delay(360);
       lcd.backlight();
-      delay(480);
+      delay(360);
     }
 
     break;
 
   default:
+    // no way they can reach this
     break;
   }
 }
