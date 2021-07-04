@@ -11,7 +11,7 @@ const int BUZZER_PIN = 8;
 const int LED_PIN_RED = 7;
 const int LED_PIN_GREEN = 11;
 
-int count = 50; // your desired timer in minutes, for eg: 180min for 3hrs
+int count = 300; // your desired timer in minutes, for eg: 180min for 3hrs
 int initialCount;
 int progressBarCount;
 
