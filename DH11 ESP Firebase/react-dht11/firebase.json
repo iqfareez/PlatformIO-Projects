@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "dht11-temp-humid",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
