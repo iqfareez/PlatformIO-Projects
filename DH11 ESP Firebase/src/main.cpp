@@ -113,7 +113,7 @@ String getCurrentTime()
     return "Failed to obtain time";
   }
   char timeStringBuff[50]; //50 chars should be enough
-  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%a, %B %d %Y %H:%M:%S", &timeinfo);
   //print like "const char*"
   Serial.println(timeStringBuff);
 
