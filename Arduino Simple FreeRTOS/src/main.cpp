@@ -149,18 +149,13 @@ void TaskBlink12(void *parameters)
 void setup()
 {
   // put your setup code here, to run once:
-  pinMode(ledPin1, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
-  pinMode(ledPin3, OUTPUT);
-  pinMode(ledPin4, OUTPUT);
-  pinMode(ledPin5, OUTPUT);
-  pinMode(ledPin6, OUTPUT);
-  pinMode(ledPin7, OUTPUT);
-  pinMode(ledPin8, OUTPUT);
-  pinMode(ledPin9, OUTPUT);
-  pinMode(ledPin10, OUTPUT);
-  pinMode(ledPin11, OUTPUT);
-  pinMode(ledPin12, OUTPUT);
+  int startPin = 2;
+  int lastPin = 13;
+
+  for (int i = startPin; i <= lastPin; i++)
+  {
+    pinMode(i, OUTPUT);
+  }
 
   xTaskCreate(TaskBlink1, "Blink LED 1 for every 100 ms", 28, NULL, 1, NULL);
   xTaskCreate(TaskBlink2, "Blink LED 2 for every 200 ms", 28, NULL, 1, NULL);
