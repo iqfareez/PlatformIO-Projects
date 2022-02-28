@@ -12,6 +12,7 @@ Electroics project such as Arduino, Maker, ESP etc.
 | Doorbell                | Doorbell that will notify user via Telegram         | ESP32    |
 | Arduino Simple FreeRTOS | Blink each LED simultaneously at different 'delay'  | Arduino  |
 | Clock OLED              | Real time clock on OLED display                     | ESP32    |
+| arduino-compass | Interfacing compasss with Arduino (and qibla) | Arduino |
 
 ## Other projects
 
