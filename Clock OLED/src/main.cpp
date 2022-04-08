@@ -87,6 +87,7 @@ void loop()
   // display all the date and time
   display.setFont(ArialMT_Plain_24);
   display.drawString(1, 8, time);
+  Serial.print(time);
   display.setFont(ArialMT_Plain_16);
   display.drawString(1, 30, date);
   display.setFont(ArialMT_Plain_10);
