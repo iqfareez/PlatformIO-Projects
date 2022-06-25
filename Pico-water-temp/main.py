@@ -5,8 +5,7 @@ from oled.fonts import ubuntu_mono_15, ubuntu_condensed_15, ubuntu_20
 import time
 import onewire, ds18x20
 
-WIDTH = 128
-HEIGHT = 64
+WIDTH, HEIGHT = 128, 64
 i2c = I2C(0, scl=Pin(17), sda=Pin(16), freq=40000)
 oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)
 
@@ -22,24 +21,23 @@ write20 = Write(oled, ubuntu_20)
 write15cond = Write(oled, ubuntu_condensed_15)
 
 write15mono.text("Temperature: ", 0, 0)
-
 oled.show()
 
 while True:
     ds_sensor.convert_temp()
     time.sleep_ms(750)
-
     value = ds_sensor.read_temp(roms[0])
     rounded = round(value, 2)
-    print(rounded)
-    
-    if value < 50 :
+    #     print(rounded)
+
+    if value < 50:
         led.value(1)
         write15cond.text("Ready to drink :)", 0, 45)
-    else :
+    else:
         led.value(0)
         write15cond.text("Careful! Still Hot", 0, 45)
 
-    write20.text(str(rounded) + " *C ", 0, 18)  # extra space to remove ghost character
-    time.sleep(.6)
+    # with extra space to remove ghost character
+    write20.text(str(rounded) + " *C ", 0, 18)
+    time.sleep(0.6)
     oled.show()
