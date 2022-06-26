@@ -20,7 +20,7 @@ Thonny IDE
 ## Hardwares
 
 1. [Temperature Sensor - Waterproof](https://my.cytron.io/p-temperature-sensor-waterproof?ref=99Y7TxrNIn6Jo)
-2. Green LED
+2. [Green LED](https://my.cytron.io/p-led-5mm-green?ref=99Y7TxrNIn6Jo)
 3. [220 Ω resistor](https://my.cytron.io/p-resistor-0.25w-5-180k-820k?ref=99Y7TxrNIn6Jo)
 4. [4.7k Ω resistor](https://my.cytron.io/p-resistor-0.25w-5-1k5-15k?ref=99Y7TxrNIn6Jo) (Here, I use a potentiometer set at 4.7kΩ because I don't have this particular value of resistor 😅)
 5. Some jumper wires
