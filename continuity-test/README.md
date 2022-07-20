@@ -13,3 +13,5 @@ When the probe touches, it beeps. Simple as that.
 Go to `src/main.cpp`
 
 ## Demo
+
+https://user-images.githubusercontent.com/60868965/179933062-73a683a1-ff5b-429d-8530-c429ef82a9d2.mp4
